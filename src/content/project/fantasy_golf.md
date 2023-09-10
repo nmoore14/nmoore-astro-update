@@ -1,8 +1,8 @@
 ---
-title: 'House Hold'
-description: 'Project Managment for your house'
-startDate: 'Aug 22 2023'
-repo: 'https://github.com/nmoore14/household-mobile'
+title: 'Fantasy Golf'
+description: 'Fantasy Golf App'
+startDate: 'Jul 25 2023'
+repo: 'https://github.com/nmoore14/fantasyGolf'
 heroImage: '/blog-placeholder-3.jpg'
 author: 'Nick Moore'
 ---
@@ -14,6 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   'firstName': 'Nick',
   'lastName': 'Moore',
   'email': 'nickmoore_1@live.com',
+  'app': 'Fantasy Golf',
 }
 ```
 
