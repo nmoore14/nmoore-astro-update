@@ -4,6 +4,13 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+/* Layout CSS Imports */
+@import './layouts/blogPost.css';
+
+/* Component CSS Imports */
+@import './components/header.css';
+@import './components/footer.css';
+
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
