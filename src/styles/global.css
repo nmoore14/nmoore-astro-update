@@ -10,6 +10,7 @@
 /* Component CSS Imports */
 @import './components/header.css';
 @import './components/footer.css';
+@import './components/postList.css';
 
 @font-face {
 	font-family: 'Atkinson';

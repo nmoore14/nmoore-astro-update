@@ -11,6 +11,17 @@ const blog = defineCollection({
 		heroImage: z.string().optional(),
 		author: z.string().optional(),
 	}),
-});
+})
 
-export const collections = { blog };
+const project = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    repo: z.string(),
+    startDate: z.coerce.date(),
+    finishedDate: z.coerce.date().optional(),
+    heroImage: z.string().optional(),
+  }),
+})
+
+export const collections = { blog, project };
