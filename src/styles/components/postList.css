@@ -51,7 +51,7 @@ ul li a {
 
 .post .post-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -64,12 +64,13 @@ ul li a {
   padding: 0;
 }
 
-.post-meta {
+.post .post-meta {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .post-meta p {
