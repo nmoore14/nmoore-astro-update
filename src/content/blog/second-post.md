@@ -1,4 +1,5 @@
 ---
+id: 2
 title: 'Second post'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 22 2022'
