@@ -33,7 +33,7 @@
   font-style: none;
 }
 
-.card-img {
+.main-card-img, .card-img {
   position: absolute;
   border-radius: 12px;
   width: 100%;
@@ -98,12 +98,17 @@
 
 
 /** Hover State **/
+.main-card-title:hover,
 .card-title:hover,
-.card-content:hover .date {
+.main-card-content:hover .date,
+.card-content:hover .date
+{
   color: rgb(var(--accent));
 }
 
-.card-content:hover .card-img {
+.card-content:hover .card-img,
+.main-card-content:hover .main-card-img
+{
   transition: ease-in-out .25s;
   box-shadow: var(--box-shadow);
 }

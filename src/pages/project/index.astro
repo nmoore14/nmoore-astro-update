@@ -24,7 +24,7 @@ const projects = (await getCollection('project')).sort(
           {
             projects.map((project, index) => (
               <div class={ index > 0 ? 'card' : 'main-card'}>
-                <a class={ index > 0 ? 'card-content' : 'main-card-content' } href={`/blog/${project.slug}/`}>
+                <a class={ index > 0 ? 'card-content' : 'main-card-content' } href={`/project/${project.slug}/`}>
                   <img class={ index > 0 ? 'card-img' : 'main-card-img' } src={project.data.heroImage} alt="" transition:name=`project-hero-img-${project.data.id}`/>
                   <div class={ index > 0 ? 'card-data' : 'main-card-data' }>
                     <h4 class={ index > 0 ? 'card-title' : 'main-card-title' }>{project.data.title}</h4>

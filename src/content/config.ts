@@ -2,8 +2,9 @@ import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
+  // id is optional to help with pages that are not blog posts that use this layout
 	schema: z.object({
-    id: z.number(),
+    id: z.number().optional(),
 		title: z.string(),
 		description: z.string(),
 		// Transform string to Date object
