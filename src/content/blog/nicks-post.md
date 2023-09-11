@@ -2,7 +2,7 @@
 id: 5
 title: 'Nicks Post'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+pubDate: 'Sep 08 2022'
 heroImage: '/blog-placeholder-3.jpg'
 author: 'Nick Moore'
 ---

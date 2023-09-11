@@ -18,7 +18,6 @@ ul li * {
 
 ul li:first-child {
   width: 100%;
-  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -31,12 +30,51 @@ ul li:first-child .title {
 }
 
 ul li img {
-  margin-bottom: 0.5rem;
   border-radius: 12px;
 }
 
 ul li a {
   display: block;
+}
+
+.main-post .post-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: -2rem;
+  background-color: var(--gray-light);
+  z-index: 900;
+}
+
+.post .post-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0rem 1rem;
+}
+
+.post-info h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.post-meta {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.post-meta p {
+  margin: 0;
+  padding: 0;
 }
 
 .title {

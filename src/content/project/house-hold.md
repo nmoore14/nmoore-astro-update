@@ -4,7 +4,7 @@ title: 'House Hold'
 description: 'Project Managment for your house'
 startDate: 'Aug 22 2023'
 repo: 'https://github.com/nmoore14/household-mobile'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/blog-placeholder-2.jpg'
 author: 'Nick Moore'
 ---
 
