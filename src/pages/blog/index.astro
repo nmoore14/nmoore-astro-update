@@ -20,28 +20,30 @@ const posts = (await getCollection('blog')).sort(
     <Header />
     <main class="blog-main">
       <section>
-        <ul class="post-list">
+        <div class="cards">
           {
             posts.map((post, index) => (
-              <li class={ index > 0 ? 'post' : 'main-post'}>
-                <a href={`/blog/${post.slug}/`}>
-                  <img width={720} height={360} src={post.data.heroImage} alt="" transition:name=`blog-hero-img-${post.data.id}`/>
-                  <div class="post-info">
-                    <h4 class="title">{post.data.title}</h4>
-                    <div class="post-meta">
-                      <p class="authorName">
-                        { post.data.author }
-                      </p>
+              <div class={ index > 0 ? 'card' : 'main-card' }>
+                <a class={ index > 0 ? 'card-content' : 'main-card-content' } href={`/blog/${post.slug}/`}>
+                  <img class={ index > 0 ? 'card-img' : 'main-card-img' } src={post.data.heroImage} alt="" transition:name=`blog-hero-img-${post.data.id}`/>
+                  <div class={ index > 0 ? 'card-data' : 'main-card-data' }>
+                    <h4 class={ index > 0 ? 'card-title' : 'main-card-title' }>{post.data.title}</h4>
+                    <div class={ index > 0 ? 'card-info' : 'main-card-info' }>
+                      { post.data.author &&
+                        <p class="authorName">
+                          { post.data.author }
+                        </p>
+                      }
                       <p class="date">
                         <FormattedDate date={post.data.pubDate} />
                       </p>
                     </div>
                   </div>
                 </a>
-              </li>
+              </div>
             ))
           }
-        </ul>
+        </div>
       </section>
     </main>
     <Footer />
