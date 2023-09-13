@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon'
+
+const { parentPage } = Astro.props
+---
+<div class="actionBar">
+  <div class="actionsLeft">
+    <a href={`/${parentPage}`}>
+      <Icon pack="eva" name="arrow-back-outline" class="backArrow" />
+    </a>
+  </div>
+  <div class="actionsRight">
+  </div>
+</div>

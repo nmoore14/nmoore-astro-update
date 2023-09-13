@@ -9,6 +9,7 @@
 
 /* Component CSS Imports */
 @import './components/header.css';
+@import './components/actionBar.css';
 @import './components/footer.css';
 @import './components/card.css';
 

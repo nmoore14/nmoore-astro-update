@@ -6,13 +6,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="slide">
+<html lang="en" transition:animate="none">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>
+		<main transition:animate="slide">
 			<h1>Welcome! I'm Nick...</h1>
 			<p>
         I'm a passionate Senior Web Developer committed to driving team productivity, delivering top-tier projects, and crafting impactful solutions through cutting-edge technologies and
