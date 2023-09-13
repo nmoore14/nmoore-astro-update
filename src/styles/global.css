@@ -13,6 +13,9 @@
 @import './components/footer.css';
 @import './components/card.css';
 
+/* Page CSS Imports */
+@import './pages/about.css';
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
