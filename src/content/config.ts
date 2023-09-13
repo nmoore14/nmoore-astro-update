@@ -12,6 +12,7 @@ const blog = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		author: z.string().optional(),
+    publish: z.boolean(),
 	}),
 })
 
@@ -24,6 +25,7 @@ const project = defineCollection({
     startDate: z.coerce.date(),
     finishedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
+    publish: z.boolean(),
   }),
 })
 

@@ -6,6 +6,7 @@ startDate: 'Aug 22 2023'
 repo: 'https://github.com/nmoore14/household-mobile'
 heroImage: '/blog-placeholder-2.jpg'
 author: 'Nick Moore'
+publish: true
 ---
 
 ## The What

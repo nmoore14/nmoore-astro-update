@@ -6,6 +6,7 @@ startDate: 'Jul 25 2023'
 repo: 'https://github.com/nmoore14/fantasyGolf'
 heroImage: '/blog-placeholder-3.jpg'
 author: 'Nick Moore'
+publish: true
 ---
 ## The What
 Fantasy Football has been around for years and has it's own dedicated services...why not golf? With this app create and manage your own fantasy golf league with your own set of custom rules.
