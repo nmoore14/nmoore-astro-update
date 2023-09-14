@@ -154,6 +154,10 @@ pre > code {
 	all: unset;
 }
 
+code > span {
+  font-size: 1rem;
+}
+
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
