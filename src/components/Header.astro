@@ -1,33 +1,42 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <header>
   <ViewTransitions />
-  <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="/project">Projects</HeaderLink>
+  <Astronav>
+    <div class="hidden-lg mobile-nav">
+      <h2><a href="/">{SITE_TITLE}</a></h2>
+      <MenuIcon class='mobile-toggle'/>
     </div>
-    <div class="social-links">
-      <a href="https://codepen.io/nmoore1407" target="_blank">
-        <span class="sr-only">Go to Nick's CodePen</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 22 22"><path fill="currentColor" d="m8.21 12l-1.33.89v-1.78l1.33.89m3.26-2.18V7.34l-4.16 2.78l1.85 1.24l2.31-1.54m5.23.3l-4.17-2.78v2.48l2.31 1.54l1.86-1.24m-9.39 3.76l4.16 2.78v-2.48l-2.31-1.54l-1.85 1.24m5.22.3v2.48l4.17-2.78l-1.86-1.24l-2.31 1.54M12 10.74L10.12 12L12 13.26L13.88 12L12 10.74M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12S6.5 2 12 2s10 4.5 10 10m-3.82-1.88v-.07l-.01-.05l-.01-.05c-.01-.01-.01-.02-.02-.04l-.01-.02l-.02-.04l-.01-.02l-.02-.03l-.02-.03l-.03-.03l-.03-.02V9.7l-.04-.02l-.01-.01l-5.65-3.76a.528.528 0 0 0-.59 0L6.05 9.67v.01L6 9.7v.02l-.03.02l-.03.03l-.01.03l-.03.03l-.01.02l-.02.04l-.01.02l-.02.04V10h-.01l-.01.05v3.9l.01.05h.01v.05c.01.01.01.02.02.04l.01.02l.02.04l.01.02l.02.03l.02.03l.03.03l.03.02v.02l.04.02l.01.01l5.66 3.77c.08.06.19.08.29.08c.1 0 .21-.03.3-.08l5.65-3.77l.01-.01l.04-.02v-.02l.03-.02l.03-.03l.02-.03l.02-.03l.01-.02l.02-.04l.01-.02l.02-.04V14h.01l.01-.05v-3.83m-1.06 2.77v-1.78l-1.33.89l1.33.89Z"/></svg>
-      </a>
-      <a href="https://github.com/nmoore14" target="_blank">
-        <span class="sr-only">Go to Nick's GitHub repo</span>
-        <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-          <path
-            fill="currentColor"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
-          </path>
-        </svg>
-      </a>
-    </div>
-  </nav>
+    <MenuItems class="hidden">
+      <h2 class="hidden-sm">
+        <a href="/">{SITE_TITLE}</a>
+      </h2>
+      <div class="internal-links">
+        <HeaderLink href="/">Home</HeaderLink>
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/about">About</HeaderLink>
+        <HeaderLink href="/project">Projects</HeaderLink>
+      </div>
+      <div class="social-links">
+        <a href="https://codepen.io/nmoore1407" target="_blank">
+          <span class="sr-only">Go to Nick's CodePen</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 22 22"><path fill="currentColor" d="m8.21 12l-1.33.89v-1.78l1.33.89m3.26-2.18V7.34l-4.16 2.78l1.85 1.24l2.31-1.54m5.23.3l-4.17-2.78v2.48l2.31 1.54l1.86-1.24m-9.39 3.76l4.16 2.78v-2.48l-2.31-1.54l-1.85 1.24m5.22.3v2.48l4.17-2.78l-1.86-1.24l-2.31 1.54M12 10.74L10.12 12L12 13.26L13.88 12L12 10.74M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12S6.5 2 12 2s10 4.5 10 10m-3.82-1.88v-.07l-.01-.05l-.01-.05c-.01-.01-.01-.02-.02-.04l-.01-.02l-.02-.04l-.01-.02l-.02-.03l-.02-.03l-.03-.03l-.03-.02V9.7l-.04-.02l-.01-.01l-5.65-3.76a.528.528 0 0 0-.59 0L6.05 9.67v.01L6 9.7v.02l-.03.02l-.03.03l-.01.03l-.03.03l-.01.02l-.02.04l-.01.02l-.02.04V10h-.01l-.01.05v3.9l.01.05h.01v.05c.01.01.01.02.02.04l.01.02l.02.04l.01.02l.02.03l.02.03l.03.03l.03.02v.02l.04.02l.01.01l5.66 3.77c.08.06.19.08.29.08c.1 0 .21-.03.3-.08l5.65-3.77l.01-.01l.04-.02v-.02l.03-.02l.03-.03l.02-.03l.02-.03l.01-.02l.02-.04l.01-.02l.02-.04V14h.01l.01-.05v-3.83m-1.06 2.77v-1.78l-1.33.89l1.33.89Z"/></svg>
+        </a>
+        <a href="https://github.com/nmoore14" target="_blank">
+          <span class="sr-only">Go to Nick's GitHub repo</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
+            <path
+              fill="currentColor"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </MenuItems>
+  </Astronav>
 </header>

@@ -166,6 +166,14 @@ hr {
 	border-top: 1px solid rgb(var(--gray-light));
 }
 
+.hidden-lg {
+  display: none;
+}
+
+.hidden-sm {
+  display: block;
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
@@ -174,6 +182,18 @@ hr {
 	main {
 		padding: 1em;
 	}
+
+  .hidden {
+    display: none;
+  }
+
+  .hidden-lg {
+    display: flex;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
 }
 
 .sr-only {

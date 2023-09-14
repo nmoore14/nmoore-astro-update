@@ -45,4 +45,21 @@ header .social-links a {
   header .social-links {
     display: none;
   }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-block: 1rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
+
+  .mobile-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-dark);
+  }
 }
