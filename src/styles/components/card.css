@@ -49,9 +49,10 @@
   align-items: center;
   width: 75%;
   margin-inline: auto;
-  inset: auto 0 -1rem;
+  inset: auto 0 1rem;
 	background: linear-gradient(var(--gray-gradient-solid)) no-repeat;
   border-radius: .5rem;
+  border: 2px solid rgb(var(--black));
   padding: .75rem .25rem;
 }
 
