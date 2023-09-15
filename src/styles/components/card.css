@@ -47,9 +47,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  left: 25%;
-  bottom: 0;
+  width: 75%;
+  margin-inline: auto;
+  inset: auto 0 -1rem;
 	background: linear-gradient(var(--gray-gradient-solid)) no-repeat;
   border-radius: .5rem;
   padding: .75rem .25rem;
