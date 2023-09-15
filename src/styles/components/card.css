@@ -112,3 +112,19 @@
   transition: ease-in-out .25s;
   box-shadow: var(--box-shadow);
 }
+
+@media (max-width: 720px) {
+  .main-card {
+    height: 18rem;
+  }
+
+  .main-card-data {
+    width: 90%;
+    inset: auto 0 3rem;
+    border: 2px solid rgb(var(--black));
+  }
+
+  .main-card-title {
+    text-align: center;
+  }
+}

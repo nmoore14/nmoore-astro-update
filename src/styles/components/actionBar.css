@@ -1,12 +1,14 @@
 .actionBar {
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem;
+}
+
+.actionsLeft, .actionsRight {
+  padding: .5rem .75rem;
 }
 
 .backArrow {

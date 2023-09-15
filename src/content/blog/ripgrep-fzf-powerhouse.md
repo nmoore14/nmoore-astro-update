@@ -18,12 +18,14 @@ Once I moved my development work to NeoVim I was still missing some of the creat
 
 Trying to find this knowledge left me scratching my head, I could use Spotlight or Raycast and find the files, but how am I going to open them in NeoVim? Then it dawned on me, just search from the terminal…pipe the result into NeoVim…start editing. Next issue, how can I do this? After a little digging, reading, trial and error, I came up with the following script.
 
+## The resolution...
 ```bash
 fr() {
   IFS=" "
   if [ $# -eq 0 ]; then
     # If no argument provided, prompt the user for a search query
-    read -p "Search for: " query
+    echo 'Please enter a string to search for'
+    return
   else
     # Use the provided argument as the search query
     query="$1"
@@ -54,5 +56,4 @@ fr() {
 
 ```
 
-## The resolution...
 This script allowed me to use [RipGrep](https://github.com/BurntSushi/ripgrep) to search for the string in the directory that I am currently in, pipe (pass) the results into [FZF](https://github.com/junegunn/fzf) and then filter the results even further. The cool parts are the flags for RipGrep and the action on select of the FZF output. I added `--line-number –with-filename` to RipGrep to give my results a little more meaning, this only gave me the filename, line number that the string was found on, and the line that the string was found on. When passed into FZF, I was able to filter it down even more and see a preview of the file. Once I press enter and select the result I would edit, it passes the path of the file and the line number directly to NeoVim. Passing those two options tells NeoVim the file to open and what line number to jump to. This gave me the ability to use my computer's search with RipGrep to find what I was looking for without it being restricted or bottlenecked by any program that the search was running in.
