@@ -43,6 +43,10 @@ header .social-links a {
 }
 
 @media (max-width: 720px) {
+  header {
+    padding: 0;
+  }
+
   header .social-links {
     display: none;
   }
@@ -50,8 +54,9 @@ header .social-links a {
   .mobile-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    gap: 5rem;
     width: 100%;
     padding-block: 1rem;
     background: white;
