@@ -73,6 +73,7 @@ body {
 }
 
 main {
+  flex-grow: 1;
 	width: var(--main-width);
 	max-width: calc(100% - 2em);
 	margin: auto;
