@@ -4,7 +4,7 @@ title: 'Ubiquiti Products Tool'
 description: 'Front End for Ubiquiti Products'
 startDate: 'Sep 02 2023'
 repo: 'https://github.com/nmoore14/ubiquiti-fe-assessment'
-heroImage: '/images/projects/ubi-front-end.png'
+heroImage: '/images/projects/ubi-project.png'
 author: 'Nick Moore'
 publish: true
 ---

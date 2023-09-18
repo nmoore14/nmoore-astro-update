@@ -3,7 +3,7 @@ id: 1
 title: 'RipGrep and FZF Powerhouse'
 description: 'My favorite script for my development workflow'
 pubDate: 'Sep 14 2023'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/images/blogs/rg-fzf-blog.png'
 author: 'Nick Moore'
 publish: true
 ---
