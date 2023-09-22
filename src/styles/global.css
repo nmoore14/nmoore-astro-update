@@ -12,6 +12,7 @@
 @import './components/actionBar.css';
 @import './components/footer.css';
 @import './components/card.css';
+@import './components/themeToggle.css';
 
 /* Page CSS Imports */
 @import './pages/about.css';
