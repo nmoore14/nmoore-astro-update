@@ -1,9 +1,8 @@
 header {
   margin: 0;
-  padding: 0 1em;
+  padding: 0 2em;
   width: 100%;
-  background: white;
-  box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  background: transparent;
 }
 
 header h2 {
@@ -24,7 +23,7 @@ header nav {
 
 header nav a {
   padding: 1em 0.5em;
-  color: var(--black);
+  color: var(--text);
   border-bottom: 4px solid transparent;
   text-decoration: none;
 }
@@ -32,6 +31,16 @@ header nav a {
 header nav a.active {
   text-decoration: none;
   border-bottom-color: var(--accent);
+}
+
+header .sub-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+  width: auto;
 }
 
 header .social-links,

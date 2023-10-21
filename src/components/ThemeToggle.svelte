@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   const rootEl = typeof document !== 'undefined' ? document.documentElement : null;
-  const themes = ['light', 'dark'];
-  let theme = ''
+  const themes:string[] = ['light', 'dark'];
+  let theme:string = ''
 
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
     theme = localStorage.getItem('theme');
@@ -15,9 +15,9 @@
   }
 
   $: if (rootEl && theme === 'light') {
-    rootEl.classList.remove('theme-dark');
+    rootEl.dataset.theme = 'light'
   } else if (rootEl && theme === 'dark') {
-    rootEl.classList.add('theme-dark');
+    rootEl.dataset.theme = 'dark'
   }
 
   const icons = [
