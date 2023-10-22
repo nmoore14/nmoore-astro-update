@@ -43,15 +43,23 @@ ul li a {
   display: block;
 }
 
+.title-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .title {
   margin: 0;
-  color: rgb(var(--black));
+  color: var(--title-color);
   line-height: 1;
 }
 
 .date {
   margin: 0;
   color: rgb(var(--gray));
+  text-align: center;
 }
 
 ul li a:hover h4,

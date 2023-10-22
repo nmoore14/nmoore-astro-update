@@ -63,3 +63,9 @@
     </label>
   {/each}
 </div>
+
+<style>
+.theme-toggle {
+  color: var(--text);
+}
+</style>
