@@ -53,6 +53,8 @@
     0 16px 32px rgba(var(--gray), 33%);
   --box-shadow-dark: 0 2px 6px rgba(var(--gray-dark), 25%), 0 8px 24px rgba(var(--gray-dark), 33%),
     0 16px 32px rgba(var(--gray-dark), 33%);
+
+  --card-width: calc((var(--main-width) / 2) - 1.75rem);
 }
 
 [data-theme='light'] {
@@ -92,6 +94,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
   height: auto;
   font-family: 'Atkinson', sans-serif;
   text-align: left;
@@ -118,7 +121,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
+  color: var(--title-color);
   line-height: 1.2;
 }
 
@@ -156,7 +159,12 @@ a:hover {
 }
 
 p {
+  color: var(--text);
   margin-bottom: 1em;
+}
+
+.sub-title {
+  color: var(--title-color);
 }
 
 textarea {

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@
 
 .card {
   position: relative;
-  width: calc((var(--main-width) / 2) - 1rem);
+  width: var(--card-width);
   height: 18rem;
 }
 
@@ -36,9 +36,19 @@
 .main-card-img, .card-img {
   position: absolute;
   border-radius: 12px;
+  transition: ease-in-out .25s;
+  box-shadow: var(--box-shadow);
+}
+
+.main-card-img {
   width: 100%;
   height: auto;
-  transition: ease-in-out .25s;
+}
+
+.card-img {
+  width: calc(var(--card-width) + 1rem);
+  height: auto;
+  z-index: 1;
 }
 
 .main-card-data {
@@ -61,11 +71,15 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  width: 100%;
-  height: 5rem;
-  top: 12.5rem;
+  width: calc(var(--card-width) - 2rem);
+  height: 10rem;
+  top: 7rem;
+  background-color: white;
+  z-index: 0;
+  border-radius: 12px;
+  padding: 0 .5rem;
 }
 
 .card-title {
@@ -94,7 +108,7 @@
   justify-content: space-between;
   align-items: center;
   width: 95%;
-  margin-top: -1.5rem;
+  margin-top: -.5rem;
 }
 
 
