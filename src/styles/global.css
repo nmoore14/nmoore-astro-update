@@ -231,7 +231,8 @@ hr {
   }
 
   main {
-    padding: 1em;
+    margin: 0;
+    padding: 0;
   }
 
   .hidden {

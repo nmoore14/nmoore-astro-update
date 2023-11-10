@@ -68,7 +68,7 @@ header .social-links a {
     gap: 5rem;
     width: 100%;
     padding-block: 1rem;
-    background: white;
+    background: var(--background);
   }
 
   #astronav-menu {
@@ -84,5 +84,6 @@ header .social-links a {
     justify-content: center;
     align-items: center;
     width: 100%;
+    color: var(--text);
   }
 }
