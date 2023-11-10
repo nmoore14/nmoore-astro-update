@@ -233,6 +233,7 @@ hr {
   main {
     margin: 0;
     padding: 0;
+    margin-bottom: 10rem;
   }
 
   .hidden {
