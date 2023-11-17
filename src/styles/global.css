@@ -13,6 +13,7 @@
 @import './components/footer.css';
 @import './components/card.css';
 @import './components/themeToggle.css';
+@import './components/bento.css';
 
 /* Page CSS Imports */
 @import './pages/about.css';
