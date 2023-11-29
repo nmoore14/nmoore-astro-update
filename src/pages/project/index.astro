@@ -16,9 +16,9 @@ const projects = (await getCollection('project')).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="content-grid">
     <Header />
-    <main transition:animate="slide">
+    <main transition:animate="slide" class="full-width content-grid">
       <section>
         <div class="cards">
           {

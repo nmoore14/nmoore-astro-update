@@ -66,6 +66,9 @@
   --accent: rgba(var(--sky));
 }
 
+/*--------------------------------*/
+/*-------       Base        ------*/
+/*--------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -79,11 +82,6 @@ html {
 }
 
 body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -94,15 +92,6 @@ body {
   color: rgb(var(--gray-dark));
   font-size: 20px;
   line-height: 1.7;
-}
-
-main {
-  position: relative;
-  flex: 1;
-  width: var(--main-width);
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
 }
 
 h1,
@@ -158,6 +147,52 @@ p {
   color: var(--title-color);
 }
 
+/*--------------------------------*/
+/*------       Layout       ------*/
+/*--------------------------------*/
+main {
+  position: relative;
+  flex: 1;
+}
+
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
 textarea {
   width: 100%;
   font-size: 16px;
@@ -208,25 +243,13 @@ hr {
   border-top: 1px solid rgb(var(--gray-light));
 }
 
-.hidden {
-  display: flex;
-}
-
-.hidden-lg {
-  display: none;
-}
-
-.hidden-sm {
-  display: block;
-}
-
 header {
+  align-self: start;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
   padding: 0 2em;
   width: 100%;
   background: transparent;
@@ -281,6 +304,18 @@ header .social-links a {
   align-items: center;
 }
 
+.hidden {
+  display: flex;
+}
+
+.hidden-lg {
+  display: none;
+}
+
+.hidden-sm {
+  display: block;
+}
+
 @media (max-width: 720px) {
   body {
     font-size: 18px;
@@ -290,10 +325,6 @@ header .social-links a {
     margin: 0;
     padding: 0;
     margin-bottom: 10rem;
-  }
-
-  .hidden {
-    display: none;
   }
 
   .hidden-lg {
@@ -330,7 +361,6 @@ header .social-links a {
   }
 
   .astronav-toggle {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

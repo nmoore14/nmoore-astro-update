@@ -16,11 +16,11 @@ const { id, title, description, startDate, finishedDate, repo, heroImage } = Ast
 		<BaseHead title={ title } description={ description } />
 	</head>
 
-	<body>
+	<body class="content-grid">
 		<Header />
     <ActionsBar parentPage="project" />
-		<main transition:animate="slide">
-			<article>
+		<main transition:animate="slide" class="full-width content-grid">
+			<article class="content">
 				<div class="hero-image">
 					{heroImage && <img width={ 1020 } height={ 510 } src={ heroImage } alt="" transition:name=`project-hero-img-${id}`/>}
 				</div>

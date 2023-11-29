@@ -12,16 +12,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="content-grid">
 		<Header title={SITE_TITLE} />
-		<main transition:animate="slide">
-			<h1 class="title">Welcome! I'm Nick...</h1>
-			<p>
-        I'm a passionate Senior Web Developer committed to driving team productivity, delivering top-tier projects, and crafting impactful solutions through cutting-edge technologies with
-        unwavering dedication to exceptional customer service.
-			</p>
-			<h2 class="sub-title" style="margin-top: 10rem; text-align: right;">...still building!</h2>
-      <Bento />
+		<main transition:animate="slide" class="full-width content-grid">
+      <div class="breakout">
+        <Bento />
+      </div>
 		</main>
 		<Footer />
 	</body>

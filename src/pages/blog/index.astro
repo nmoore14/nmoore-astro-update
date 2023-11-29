@@ -16,10 +16,10 @@ const posts = (await getCollection('blog')).filter(post => post.data.publish).so
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="content-grid">
     <Header />
-    <main class="blog-main" transition:animate="slide">
-      <section>
+    <main class="blog-main" transition:animate="slide" class="full-width content-grid">
+      <section class="content">
         <div class="cards">
           {
             posts.map((post, index) => (
