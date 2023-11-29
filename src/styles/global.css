@@ -4,19 +4,9 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-/* Layout CSS Imports */
-@import './layouts/blogPost.css';
-
 /* Component CSS Imports */
-@import './components/header.css';
-@import './components/actionBar.css';
-@import './components/footer.css';
+/* TODO: Break this out to its own component */
 @import './components/card.css';
-@import './components/themeToggle.css';
-@import './components/bento.css';
-
-/* Page CSS Imports */
-@import './pages/about.css';
 
 @font-face {
   font-family: 'Atkinson';
@@ -218,12 +208,77 @@ hr {
   border-top: 1px solid rgb(var(--gray-light));
 }
 
+.hidden {
+  display: flex;
+}
+
 .hidden-lg {
   display: none;
 }
 
 .hidden-sm {
   display: block;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 2em;
+  width: 100%;
+  background: transparent;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1em;
+}
+
+header h2 a,
+header h2 a.active {
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header nav a {
+  padding: 1em 0.5em;
+  color: var(--text);
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+}
+
+header nav a.active {
+  text-decoration: none;
+  border-bottom-color: var(--accent);
+}
+
+header .sub-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+  width: auto;
+}
+
+header .social-links,
+header .social-links a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 720px) {
@@ -248,6 +303,41 @@ hr {
   .hidden-sm {
     display: none;
   }
+
+  header {
+    padding: 0;
+  }
+
+  header .social-links {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+    padding-block: 1rem;
+    background: var(--background);
+  }
+
+  #astronav-menu {
+    background: none;
+    border: none;
+    color: var(--accent-dark);
+  }
+
+  .astronav-toggle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--text);
+ }
 }
 
 .sr-only {
