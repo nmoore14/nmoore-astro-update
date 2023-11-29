@@ -243,6 +243,7 @@ hr {
   border-top: 1px solid rgb(var(--gray-light));
 }
 
+/* Header Styling */
 header {
   align-self: start;
   display: flex;
@@ -304,16 +305,12 @@ header .social-links a {
   align-items: center;
 }
 
-.hidden {
-  display: flex;
-}
-
 .hidden-lg {
   display: none;
 }
 
 .hidden-sm {
-  display: block;
+  display: none;
 }
 
 @media (max-width: 720px) {
@@ -325,6 +322,10 @@ header .social-links a {
     margin: 0;
     padding: 0;
     margin-bottom: 10rem;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .hidden-lg {
