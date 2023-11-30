@@ -3,39 +3,23 @@ import { ViewTransitions } from 'astro:transitions';
 import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
 import HeaderLink from './HeaderLink.astro';
 import ThemeToggle from './ThemeToggle.svelte';
-
-
-type themeSetting = {
-  isDark: boolean,
-}
-
-const themeSetting:themeSetting = { isDark: false };
-
-if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-  let currentTheme = localStorage.getItem('theme');
-  themeSetting.isDark = currentTheme == 'dark' ? true : false
-} else if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  themeSetting.isDark = true
-}
 ---
 
 <header class="breakout">
   <ViewTransitions />
   <Astronav closeOnClick>
     <div class="hidden-lg mobile-nav">
-      <h2>
+      <h2 class="logo-text">
         <a href="/">
-          { themeSetting.isDark && <img src='/images/logos/dev_logo_dark.png' alt="Nick Moore Developer Logo" /> }
-          { !themeSetting.isDark && <img src='/images/logos/dev_logo_light.png' alt="Nick Moore Developer Logo" /> }
+          &lbrace;nmoore<span class="logo-code">[dev]</span>&rbrace;
         </a>
       </h2>
       <MenuIcon class='mobile-toggle'/>
     </div>
     <MenuItems class="hidden">
-      <h2 class="hidden-sm">
+      <h2 class="logo-text hidden-sm">
         <a href="/">
-          { themeSetting.isDark && <img src='/images/logos/dev_logo_dark.png' alt="Nick Moore Developer Logo" /> }
-          { !themeSetting.isDark && <img src='/images/logos/dev_logo_light.png' alt="Nick Moore Developer Logo" /> }
+          &lbrace;nmoore<span class="logo-code">[dev]</span>&rbrace;
         </a>
       </h2>
       <div class="internal-links">
@@ -79,14 +63,21 @@ header {
   background: transparent;
 }
 
-header h2 {
+.logo-text {
   margin: 0;
   font-size: 1em;
+  font-family: 'Atkinson';
+  color: var(--text);
 }
 
-header h2 a,
-header h2 a.active {
+.logo-text a,
+.logo-text a.active {
   text-decoration: none;
+}
+
+.logo-code {
+  font-family: monospace;
+  color: var(--accent);
 }
 
 header nav {
