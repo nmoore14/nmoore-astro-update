@@ -51,7 +51,6 @@ fr() {
   else
     echo "No file selected."
   fi
-
 }
 
 ```

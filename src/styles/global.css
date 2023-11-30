@@ -208,11 +208,14 @@ code {
   padding: 2px 5px;
   background-color: var(--background);
   border-radius: 2px;
+  font-family: var(--code-font);
 }
 
 pre {
   padding: 1.5em;
   border-radius: 8px;
+  font-family: var(--code-font);
+  line-height: 1.16;
 }
 
 pre > code {
