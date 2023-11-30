@@ -8,21 +8,7 @@
 /* TODO: Break this out to its own component */
 @import './components/card.css';
 
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Atkinson';
-  src: url('/fonts/atkinson-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&family=JetBrains+Mono:wght@400;600;700&family=Yeseva+One&display=swap');
 
 :root {
   --main-width: 800px;
@@ -46,6 +32,9 @@
     0 16px 32px rgba(var(--gray-dark), 33%);
 
   --card-width: calc((var(--main-width) / 2) - 1.75rem);
+  --header-font: 'Yeseva One', serif;
+  --body-font: 'Dosis', sans-serif;
+  --code-font: 'JetBrains Mono', monospace;
 }
 
 [data-theme='light'] {
@@ -85,7 +74,7 @@ body {
   width: 100%;
   min-height: 100vh;
   height: auto;
-  font-family: 'Atkinson', sans-serif;
+  font-family: var(--body-font);
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -106,14 +95,17 @@ h6 {
 }
 
 h1 {
+  font-family: var(--header-font);
   font-size: 3.052em;
 }
 
 h2 {
+  font-family: var(--header-font);
   font-size: 2.441em;
 }
 
 h3 {
+  font-family: var(--header-font);
   font-size: 1.953em;
 }
 
@@ -251,19 +243,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
   width: 100%;
   background: transparent;
-}
-
-header h2 {
-  margin: 0;
-  font-size: 1em;
-}
-
-header h2 a,
-header h2 a.active {
-  text-decoration: none;
 }
 
 header nav {

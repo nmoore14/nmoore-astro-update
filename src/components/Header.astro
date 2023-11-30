@@ -51,22 +51,10 @@ import ThemeToggle from './ThemeToggle.svelte';
 </header>
 
 <style>
-header {
-  align-self: start;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2em;
-  width: 100%;
-  background: transparent;
-}
-
 .logo-text {
   margin: 0;
   font-size: 1em;
-  font-family: 'Atkinson';
+  font-family: var(--header-font);
   color: var(--text);
 }
 
@@ -76,46 +64,7 @@ header {
 }
 
 .logo-code {
-  font-family: monospace;
+  font-family: var(--code-font);
   color: var(--accent);
-}
-
-header nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-header nav a {
-  padding: 1em 0.5em;
-  color: var(--text);
-  border-bottom: 4px solid transparent;
-  text-decoration: none;
-}
-
-header nav a.active {
-  text-decoration: none;
-  border-bottom-color: var(--accent);
-}
-
-header .sub-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: .5rem;
-  width: auto;
-}
-
-header .social-links,
-header .social-links a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 </style>
