@@ -310,7 +310,7 @@ header .social-links a {
 }
 
 .hidden-sm {
-  display: none;
+  display: flex;
 }
 
 @media (max-width: 720px) {
