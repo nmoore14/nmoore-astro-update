@@ -12,14 +12,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="content-grid">
-		<Header title={SITE_TITLE} />
-		<main transition:animate="slide" class="full-width content-grid">
+	<body class="content-grid flex flex-col">
+    <Header title={SITE_TITLE} />
+    <main transition:animate="slide" class="full-width content-grid">
       <div class="breakout">
-        <h2 class="title">Services</h2>
+        <h2 class="title">What can I do...</h2>
         <Bento />
       </div>
-		</main>
-		<Footer />
+    </main>
+    <Footer />
 	</body>
 </html>

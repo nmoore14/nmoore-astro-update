@@ -185,6 +185,15 @@ main {
   grid-template-columns: inherit;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+  width: 100%;
+}
+
 textarea {
   width: 100%;
   font-size: 16px;

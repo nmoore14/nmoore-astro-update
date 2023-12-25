@@ -16,9 +16,10 @@ const posts = (await getCollection('blog')).filter(post => post.data.publish).so
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="content-grid">
+  <body class="content-grid flex flex-col">
     <Header />
-    <main class="blog-main" transition:animate="slide" class="full-width content-grid">
+    <main class="blog-main full-width content-grid" transition:animate="slide">
+      <h1>BLOG</h1>
       <section class="content">
         <div class="cards">
           {

@@ -16,7 +16,7 @@ const { id, title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body class="content-grid">
+  <body class="content-grid flex flex-col">
 		<Header />
     { id && <ActionsBar parentPage="blog" /> }
 		<main transition:animate="slide" class="full-width content-grid">
