@@ -9,17 +9,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 <!doctype html>
 <html lang="en" transition:animate="none">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="content-grid flex flex-col">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="content-grid flex flex-col">
     <Header title={SITE_TITLE} />
     <main transition:animate="slide" class="full-width content-grid">
+      <div class="">
+        <p>
+          I'm a passionate Senior Web Developer committed to driving team productivity, delivering top-tier projects, and crafting impactful solutions through cutting-edge technologies with
+          unwavering dedication to exceptional customer service.
+        </p>
+      </div>
       <div class="breakout">
         <h2 class="title">What can I do...</h2>
         <Bento />
       </div>
     </main>
     <Footer />
-	</body>
+  </body>
 </html>

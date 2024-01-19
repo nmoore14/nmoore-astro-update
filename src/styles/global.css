@@ -35,6 +35,8 @@
   --header-font: 'Yeseva One', serif;
   --body-font: 'Dosis', sans-serif;
   --code-font: 'JetBrains Mono', monospace;
+
+  --blend: difference;
 }
 
 [data-theme='light'] {
@@ -53,6 +55,7 @@
   --box-shadow: var(--box-shadow-dark);
   --title-color: rgba(var(--blue), 100%);
   --accent: rgba(var(--sky));
+  --blend: color-dodge;
 }
 
 /*--------------------------------*/
